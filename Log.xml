@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-02-28T00:04:59.673354100Z</date>
+  <millis>1646006699673</millis>
+  <nanos>354100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>logger.Logger</class>
+  <method>init</method>
+  <thread>1</thread>
+  <message>[Logger]Setup complete.</message>
+</record>
+<record>
+  <date>2022-02-28T00:04:59.704619400Z</date>
+  <millis>1646006699704</millis>
+  <nanos>619400</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>example.ExampleEntry</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>My first log.</message>
+</record>
+</log>
