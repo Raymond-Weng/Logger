@@ -13,4 +13,4 @@ It just is a simple program, maybe you can take some time to understand it:)
 Please use Issues in Github, thanks!
 
 # Chinese version README 中文版讀我檔案
-[讀我.md](https://github.com/Iso-Legend-Ch/Logger/blob/main/讀我.md)  
+[讀我.md](https://github.com/Iso-Legend-Ch/Logger/blob/master/%E8%AE%80%E6%88%91.md)  
