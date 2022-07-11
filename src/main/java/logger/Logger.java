@@ -4,16 +4,14 @@ import java.io.IOException;
 import java.util.logging.*;
 
 public class Logger {
-    private static Logger main = null;
-
-    private static java.util.logging.Logger logger = java.util.logging.Logger.getLogger(java.util.logging.Logger.GLOBAL_LOGGER_NAME);
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(java.util.logging.Logger.GLOBAL_LOGGER_NAME);
     private static Level consoleLevel, fileLevel;
 
 
-    public static void init(Level consoleLevel, Level fileLevel) {
+    public static void init() {
         try {
-            Logger.consoleLevel = consoleLevel;
-            Logger.fileLevel = fileLevel;
+            Logger.consoleLevel = LoggerConsts.CONSOLE_LEVEL;
+            Logger.fileLevel = LoggerConsts.FILE_LEVEL;
             setup();
         } catch (Exception e) {
             logger.log(Level.WARNING, "[Logger]Oh no,we just have a exception while setuping!", e);
@@ -29,7 +27,7 @@ public class Logger {
         consoleHandler.setLevel(consoleLevel);
         logger.addHandler(consoleHandler);
 
-        FileHandler fileHandler = new FileHandler("Log.xml");
+        FileHandler fileHandler = new FileHandler(LoggerConsts.FILE_PATH);
         fileHandler.setLevel(fileLevel);
         fileHandler.setFormatter(new XMLFormatter());
         logger.addHandler(fileHandler);
